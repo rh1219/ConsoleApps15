@@ -11,10 +11,13 @@ namespace ConsoleAppProject
     /// to start App01 to App05 for CO453 CW1
     /// 
     /// This Project has been modified by:
-    /// Derek Peacock 05/02/2022
+    /// Rahaat Hussain 05/02/2022
     /// </summary>
     public static class Program
     {
+        private static DistanceConverter converter = new DistanceConverter();
+        private static BMI calculator = new BMI();
+
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -22,12 +25,26 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.WriteLine(" =================================================");
             Console.WriteLine("    BNU CO453 Applications Programming 2021-2022! ");
-            Console.WriteLine("        by Derek                                  ");
             Console.WriteLine(" =================================================");
             Console.WriteLine();
 
-            DistanceConverter converter = new DistanceConverter();
-            converter.Run();
+            //choices for applications shown here
+            Console.WriteLine("\n Options\n");
+            Console.WriteLine("-----------------");
+            Console.WriteLine("\n 1. Distance Converter\n");
+            Console.WriteLine("\n 2. BMI Calculator\n");
+
+            Console.WriteLine("Enter your choice > ");
+            string option = Console.ReadLine();
+
+            if (option == "1")
+            {
+               converter.ConvertDistance();
+            }
+            else if (option == "2")
+            {
+                calculator.CalculateIndex();
+            }
         }
     }
 }
