@@ -26,7 +26,8 @@ namespace ConsoleAppProject.App01
     }
 
     /// <summary>
-    /// Constructor
+    /// Constructor initialises fromUnit to Miles and toUnit to Feet
+    /// using enumeration
     /// </summary>
     public DistanceConverter()
     {
