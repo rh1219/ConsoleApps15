@@ -43,11 +43,12 @@ namespace ConsoleAppProject.App01
 
         public void ConvertDistance()
         {
-            fromUnit = SelectUnit("Select the from distance unit: "):
-            toUnit = SelectUnit("Enter the to distance ")
+            OutputHeading();
 
-            OutputHeading($"Converting {fromUnit} to {toUnit}");
+            fromUnit = SelectUnit(" Select the from distance unit: "):
+            toUnit = SelectUnit(" Enter the to distance: ")
 
+            Console.WriteLine($"\n Converting {fromUnit} to {toUnit}");
             fromDistance = InputDistance($"Enter number of {fromUnit}: ")
 
             CalculateDistance();
@@ -87,7 +88,10 @@ namespace ConsoleAppProject.App01
         {
             string choice = DisplayChoices(prompt);
 
-            return ExecuteChoice(choice);
+            string unit = ExecuteChoice(choice);
+            Console.WriteLine($" You have chosen {unit}");
+            return unit;
+        }
 
         private static string ExecuteChoice(string choice)
         {
@@ -136,22 +140,19 @@ namespace ConsoleAppProject.App01
         /// </summary> 
         private void OutputDistance()
         {
-            Console.WriteLine($" {fromDistance}  {fromUnit}" +
-                $" is {toDistance} {toUnit}");
+            Console.WriteLine($"\n {fromDistance}  {fromUnit}" +
+                $" is {toDistance} {toUnit}\n");
         }
 
         /// <summary>
         /// 
         /// </summary> 
-        private void OutputHeading(String prompt)
+        private void OutputHeading()
         {
             Console.WriteLine(" ===============================================");
             Console.WriteLine("              Distance Converter                ");
             Console.WriteLine("               By Rahaat Hussain                ");
             Console.WriteLine(" ===============================================");
-
-            Console.WriteLine(prompt);
-            Console.WriteLine();
         }
     }
 }
