@@ -41,16 +41,45 @@ namespace ConsoleAppProject.App01
         /// the distance in feet
         /// </summary>  
 
-        public void MilesToFeet()
+        public void ConvertDistance()
         {
-            OutputHeading();
-            Console.WriteLine($"Converting {fromUnit} to {toUnit}");
+            fromUnit = SelectUnit("Select the from distance unit: "):
+            toUnit = SelectUnit("Enter the to distance ")
+
+            OutputHeading($"Converting {fromUnit} to {toUnit}");
 
             fromDistance = InputDistance($"Enter number of {fromUnit}: ")
 
             //CalculateFeet();
 
-            OutputDistance(fromDistance, fromUnit, toDistance, toUnit);
+            OutputDistance();
+        }
+
+        private string SelectUnit(string prompt)
+        {
+            Console.WriteLine():
+            Console.WriteLine($" 1. {FEET}");
+            Console.WriteLine($" 2. {METRES}");
+            Console.WriteLine($" 3. {MILES}");
+            Console.WriteLine():
+
+            Console.Write(prompt);
+            string choice = Console.ReadLine();
+
+            if(choice.Equals("1"))
+            {
+                return FEET;
+            }
+            else if (choice.Equals("2"))
+            {
+                return METRES;
+            }
+            else if (choice.Equals("3"))
+            {
+                return MILES;
+            }
+
+            return null;
         }
 
         /// <summary>
@@ -67,9 +96,7 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// 
         /// </summary> 
-        private void OutputDistance(
-            double fromDistance, string fromUnit,
-            double toDistance, string toUnit)
+        private void OutputDistance()
         {
             Console.WriteLine($" {fromDistance}  {fromUnit}" +
                 $" is {toDistance} {toUnit}");
