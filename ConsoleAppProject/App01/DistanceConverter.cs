@@ -4,8 +4,8 @@ namespace ConsoleAppProject.App01
 {
     /// <summary>
     /// Application will prompt user to input a distance
-    /// measure in miles and will calculate and the output 
-    /// equivalent in feet
+    /// measured in miles or feet and will calculate and the output 
+    /// equivalent in feet or metres
     /// </summary>
    
     public class DistanceConverter
