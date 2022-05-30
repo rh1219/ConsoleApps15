@@ -50,9 +50,37 @@ namespace ConsoleAppProject.App01
 
             fromDistance = InputDistance($"Enter number of {fromUnit}: ")
 
-            //CalculateFeet();
+            CalculateDistance();
 
             OutputDistance();
+        }
+
+        private void CalculateDistance()
+        {
+            if(fromUnit == MILES && toUnit == FEET)
+            {
+                toDistance = fromDistance * FEET_IN_MILES;
+            }
+            else if(fromUnit == FEET && toUnit == MILES)
+            {
+                toDistance = fromDistance / FEET_IN_MILES;
+            }
+            else if(fromUnit == MILES && toUnit == METRES)
+            {
+                toDistance = fromDistance * METRES_IN_MILES;
+            }
+            else if(fromUnit == METRES && toUnit == MILES)
+            {
+                toDistance = fromDistance / METRES_IN_MILES;
+            }
+            else if(fromUnit == FEET && toUnit == METRES)
+            {
+                toDistance = fromDistance * FEET_IN_METRES;
+            }
+            else if(fromUnit == METRES && toUnit == FEET)
+            {
+                toDistance = fromDistance / FEET_IN_METRES;
+            }
         }
 
         private string SelectUnit(string prompt)
@@ -111,7 +139,6 @@ namespace ConsoleAppProject.App01
             Console.WriteLine($" {fromDistance}  {fromUnit}" +
                 $" is {toDistance} {toUnit}");
         }
-
 
         /// <summary>
         /// 
