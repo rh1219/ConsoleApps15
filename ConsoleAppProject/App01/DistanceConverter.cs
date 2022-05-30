@@ -29,6 +29,8 @@ namespace ConsoleAppProject.App01
         public void MilesToFeet()
         {
             OutputHeading();
+            Console.WriteLine("Converting Miles to Feet");
+
             InputMiles();
             CalculateFeet();
             OutputFeet();
@@ -37,6 +39,8 @@ namespace ConsoleAppProject.App01
         public void FeetToMiles()
         {
             OutputHeading();
+            Console.WriteLine("Converting Feet to Miles");
+
             InputMiles();
             CalculateFeet();
             OutputFeet();
@@ -45,6 +49,8 @@ namespace ConsoleAppProject.App01
         public void MilesToMetres()
         {
             OutputHeading();
+            Console.WriteLine("Converting Miles to Metres");
+
             InputMiles();
             CalculateFeet();
             OutputFeet();
@@ -116,12 +122,15 @@ namespace ConsoleAppProject.App01
             Console.WriteLine(miles + " miles is " + metres + " metres");
         }
 
-        private void OutputHeading()
+        private void OutputHeading(String prompt)
         {
             Console.WriteLine(" ===============================================");
             Console.WriteLine("              Distance Converter                ");
             Console.WriteLine("               By Rahaat Hussain                ");
             Console.WriteLine(" ===============================================");
+
+            Console.WriteLine(prompt);
+            Console.WriteLine();
         }
     }
 }
