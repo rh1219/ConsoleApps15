@@ -57,15 +57,12 @@ namespace ConsoleAppProject.App01
 
         private string SelectUnit(string prompt)
         {
-            Console.WriteLine():
-            Console.WriteLine($" 1. {FEET}");
-            Console.WriteLine($" 2. {METRES}");
-            Console.WriteLine($" 3. {MILES}");
-            Console.WriteLine():
+            string choice = DisplayChoices(prompt);
 
-            Console.Write(prompt);
-            string choice = Console.ReadLine();
+            return ExecuteChoice(choice);
 
+        private static string ExecuteChoice(string choice)
+        {
             if(choice.Equals("1"))
             {
                 return FEET;
@@ -80,6 +77,19 @@ namespace ConsoleAppProject.App01
             }
 
             return null;
+        }
+
+        private static string DisplayChoices(string prompt)
+        {
+            Console.WriteLine();
+            Console.WriteLine($" 1. {FEET}");
+            Console.WriteLine($" 2. {METRES}");
+            Console.WriteLine($" 3. {MILES}");
+            Console.WriteLine();
+
+            Console.Write(prompt);
+            string choice = Console.ReadLine();
+            return choice;
         }
 
         /// <summary>
