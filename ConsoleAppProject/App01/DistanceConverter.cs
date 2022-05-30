@@ -31,7 +31,7 @@ namespace ConsoleAppProject.App01
             OutputHeading();
             Console.WriteLine("Converting Miles to Feet");
 
-            InputMiles();
+            miles = InputDistance("Enter number of miles: ")
             CalculateFeet();
             OutputFeet();
         }
@@ -41,9 +41,9 @@ namespace ConsoleAppProject.App01
             OutputHeading();
             Console.WriteLine("Converting Feet to Miles");
 
-            InputMiles();
-            CalculateFeet();
-            OutputFeet();
+            feet = InputDistance("Enter number of feet: ")
+            CalculateMiles();
+            OutputMiles();
         }
 
         public void MilesToMetres()
@@ -51,36 +51,21 @@ namespace ConsoleAppProject.App01
             OutputHeading();
             Console.WriteLine("Converting Miles to Metres");
 
-            InputMiles();
-            CalculateFeet();
-            OutputFeet();
+            miles = InputDistance("Enter number of miles: ")
+            CalculateMetres();
+            OutputMetres();
         }
         
         /// <summary>
         /// Prompts user to enter distance in miles
         /// Input miles as double number
         /// </summary> 
-        private void InputMiles()
+        private double InputDistance(string prompt)
         {
-            Console.Write("Enter the number of miles > ");
+            Console.Write(prompt);
             string value = Console.ReadLine();
-            miles = Convert.ToDouble(value);
+            return = Convert.ToDouble(value);
         }
-
-        private void InputMetres()
-        {
-            Console.Write("Enter the number of metres > ");
-            string value = Console.ReadLine();
-            metres = Convert.ToDouble(value);
-        }
-
-        private void InputFeet()
-        {
-            Console.Write("Enter the number of feet > ");
-            string value = Console.ReadLine();
-            feet = Convert.ToDouble(value);
-        }
-
         
         /// <summary>
         /// 
