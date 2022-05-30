@@ -11,7 +11,7 @@ namespace ConsoleAppProject
     /// to start App01 to App05 for CO453 CW1
     /// 
     /// This Project has been modified by:
-    /// Rahaat Hussain 05/02/2022
+    /// Rahaat Hussain 
     /// </summary>
     public static class Program
     {
@@ -19,16 +19,14 @@ namespace ConsoleAppProject
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
 
-            Console.WriteLine();
-            Console.WriteLine(" =================================================");
             Console.WriteLine("    BNU CO453 Applications Programming 2021-2022! ");
-            Console.WriteLine(" =================================================");
             Console.WriteLine();
-            Console.Beep();
 
             DistanceConverter converter = new DistanceConverter();
-            converter.Run();
 
+            converter.MilesToFeet();
+            converter.FeetToMiles();
+            converter.MilesToMetres();
         }
     }
 }
