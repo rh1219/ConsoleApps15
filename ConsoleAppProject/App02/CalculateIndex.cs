@@ -33,9 +33,9 @@ namespace ConsoleAppProject.App02
         public void CalculateIndex()
         {
             //Heading for app
-            Console.WriteLine(" =================");
-            Console.WriteLine("BMI Calculator");
-            Console.WriteLine(" =================");
+            Console.WriteLine("=================");
+            Console.WriteLine(" BMI Calculator");
+            Console.WriteLine("=================");
 
             //SelectUnit method used to make unit choice
             UnitSystems unitSystem = SelectUnits();
