@@ -48,7 +48,9 @@ namespace ConsoleAppProject.App01
         fromUnit = SelectUnit(" Select the from distance unit: ");
         toUnit = SelectUnit(" Select the to distance unit: ");
 
-        Console.WriteLine($"\n Converting (fromUnit) to (toUnit) > ");
+        Console.WriteLine($"\n Converting {fromUnit} to {toUnit}: ");
+
+        fromDistance = InputDistance($" Enter the number of {fromUnit}: ");
 
         CalculateDistance();
 
@@ -88,9 +90,9 @@ namespace ConsoleAppProject.App01
     private static string DisplayChoices(string prompt)
     {
         Console.WriteLine();
-        Console.WriteLine("1. (DistanceUnits.Feet)");
-        Console.WriteLine("2. (DistanceUnits.Metres)");
-        Console.WriteLine("3. (DistanceUnits.Miles)");
+        Console.WriteLine($"1. {DistanceUnits.Feet}");
+        Console.WriteLine($"2. {DistanceUnits.Metres}");
+        Console.WriteLine($"3. {DistanceUnits.Miles}");
         Console.WriteLine();
 
         Console.Write(prompt);
