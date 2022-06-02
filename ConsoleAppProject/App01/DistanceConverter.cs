@@ -12,8 +12,7 @@ namespace ConsoleAppProject.App01
     /// </author>
    
    public class DistanceConverter
-    {
-
+   {
         // Distance conversion constants
         public const int FEET_IN_MILES = 5280;
         public const double METRES_IN_MILES = 1609.34;
@@ -26,7 +25,6 @@ namespace ConsoleAppProject.App01
         // fromUnit and toUnit set as enumeration types
         private DistanceUnits fromUnit;
         private DistanceUnits toUnit;
-    }
 
     /// <summary>
     /// Constructor initialises fromUnit to Miles and toUnit to Feet
@@ -161,11 +159,11 @@ namespace ConsoleAppProject.App01
         {
             toDistance = fromDistance / METRES_IN_MILES;
         }
-        else if (fromUnit == DistanceUnits.Feet && Metres == DistanceUnits.Metres)
+        else if (fromUnit == DistanceUnits.Feet && toUnit == DistanceUnits.Metres)
         {
             toDistance = fromDistance * FEET_IN_METRES;
         }
-        else if (fromUnit == DistanceUnits.Metres && Metres == DistanceUnits.Feet)
+        else if (fromUnit == DistanceUnits.Metres && toUnit == DistanceUnits.Feet)
         {
             toDistance = fromDistance / FEET_IN_METRES;
         }
@@ -176,4 +174,6 @@ namespace ConsoleAppProject.App01
         Console.WriteLine($"\n {fromDistance}  {fromUnit} " + 
             $" is {toDistance}  {toUnit}!\n");
     }
+
+   }
 }
