@@ -45,7 +45,7 @@ namespace ConsoleAppProject.App01
         {
             OutputHeading();
 
-            fromUnit = SelectUnit(" Select the from distance unit: "):
+            fromUnit = SelectUnit(" Select the from distance unit: ");
             toUnit = SelectUnit(" Enter the to distance: ");
 
             Console.WriteLine($"\n Converting {fromUnit} to {toUnit}");
@@ -132,7 +132,7 @@ namespace ConsoleAppProject.App01
         {
             Console.Write(prompt);
             string value = Console.ReadLine();
-            return = Convert.ToDouble(value);
+            return Convert.ToDouble(value);
         }
         
         /// <summary>

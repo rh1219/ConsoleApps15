@@ -62,15 +62,15 @@ namespace ConsoleAppProject.App02
 
         private UnitSystems SelectUnits()
         {
-            Console.WriteLine("1. Imperial")
-            Console.WriteLine("2. Metric")
+            Console.WriteLine("1. Imperial");
+            Console.WriteLine("2. Metric");
 
 
         Console.Write("\n Choose unit type: ");
             string typeChoice = Console.ReadLine();
 
             if (typeChoice == "1") return UnitSystems.Imperial;
-            else return UnitSystems.metric
+            else return UnitSystems.metric;
         }
 
         private double InputNumber(string prompt)
@@ -118,36 +118,36 @@ namespace ConsoleAppProject.App02
             else if (indexBMI <= NORMAL)
             {
                 Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
-                    $"you are classed as normal weight.")
+                    $"you are classed as normal weight.");
             }
             else if (indexBMI <= OVERWEIGHT)
             {
                 Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
-                    $"you are classed as overweight.")
+                    $"you are classed as overweight.");
             }
             else if (indexBMI <= OBESE_CLASS_I)
             {
                 Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
-                    $"you are classed as Obese Class 1.")
+                    $"you are classed as Obese Class 1.");
             }
             else if (indexBMI <= OBESE_CLASS_II)
             {
                 Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
-                    $"you are classed as Obese Class 2.")
+                    $"you are classed as Obese Class 2.");
             }
             else if (indexBMI <= OBESE_CLASS_III)
             {
                 Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
-                    $"you are classed as Obese Class 3.")
+                    $"you are classed as Obese Class 3.");
             }
         }
 
         public void OutputBameMessage()
         {
-            Console.WriteLine("==================================================")
+            Console.WriteLine("==================================================");
             Console.WriteLine("There are higher risks for: ");
             Console.WriteLine("Black, Asian or other minority people");
-            Console.WriteLine("==================================================")
+            Console.WriteLine("==================================================");
             Console.WriteLine("The risk of excess weight for some BAME groups");
             Console.WriteLine("occur at a lower BMI than for the white population");
         }
