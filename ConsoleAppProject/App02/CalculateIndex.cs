@@ -2,10 +2,10 @@
 
 namespace ConsoleAppProject.App02
 {
-    /// <summary>
-    /// 
-    /// 
-    /// 
-    ///
-    /// 
+    public enum UnitSystems
+    {
+        Metric,
+        Imperial
+    }
+
 }

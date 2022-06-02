@@ -70,7 +70,7 @@ namespace ConsoleAppProject.App02
             string typeChoice = Console.ReadLine();
 
             if (typeChoice == "1") return UnitSystems.Imperial;
-            else return UnitSystems.metric;
+            else return UnitSystems.Metric;
         }
 
         private double InputNumber(string prompt)
@@ -108,7 +108,7 @@ namespace ConsoleAppProject.App02
             indexBMI = pound * 703 / (inch * inch);
         }
 
-        public void OuputHealthMessage()
+        public void OutputHealthMessage()
         {
             if (indexBMI < UNDERWEIGHT)
             {
