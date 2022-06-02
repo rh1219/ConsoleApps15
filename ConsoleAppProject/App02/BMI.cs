@@ -10,7 +10,7 @@ namespace ConsoleAppProject.App02
     /// </author>
     public class BMI
     {
-          //Constant for pounds in a stone and inches in a foot
+        //Constant for pounds in a stone and inches in a foot
         public const int POUNDS_IN_STONES = 14;
         public const int INCHES_IN_FEET = 12;
 
@@ -34,12 +34,15 @@ namespace ConsoleAppProject.App02
 
         public void CalculateIndex()
         {
+            //Heading for app
             Console.WriteLine(" =================");
             Console.WriteLine("BMI Calculator");
             Console.WriteLine(" =================");
 
+            //SelectUnit method used to make unit choice
             UnitSystems unitSystem = SelectUnits();
 
+            //Decision made for imperial or metric
             if (unitSystem == UnitSystems.Imperial)
             {
                 InputImperialDetails();
@@ -51,6 +54,8 @@ namespace ConsoleAppProject.App02
                 CalculateMetricBMI();
             }
 
+            //Output the required messages for BMI calculations
+            //Also outputs BAME message
             OutputHealthMessage();
             OutputBameMessage();
         }

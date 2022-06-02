@@ -46,10 +46,10 @@ namespace ConsoleAppProject.App01
             OutputHeading();
 
             fromUnit = SelectUnit(" Select the from distance unit: "):
-            toUnit = SelectUnit(" Enter the to distance: ")
+            toUnit = SelectUnit(" Enter the to distance: ");
 
             Console.WriteLine($"\n Converting {fromUnit} to {toUnit}");
-            fromDistance = InputDistance($"Enter number of {fromUnit}: ")
+            fromDistance = InputDistance($"Enter number of {fromUnit}: ");
 
             CalculateDistance();
 
