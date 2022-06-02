@@ -64,7 +64,7 @@ namespace ConsoleAppProject.App02
             Console.WriteLine("2. Metric");
 
 
-            Console.Write("\n Choose unit type: ");
+            Console.Write("\nChoose unit type: ");
             string typeChoice = Console.ReadLine();
 
             if (typeChoice == "1") return UnitSystems.Imperial;
@@ -85,12 +85,12 @@ namespace ConsoleAppProject.App02
         //Input imperial details and convert into inches and pounds.
         private void InputImperialDetails()
         {
-            Console.Write("Input your weight (stones & pounds) \n");
-            double stones = InputNumber("Input weight in stones: ");
+            Console.Write("\nInput your weight (stones & pounds) \n");
+            double stones = InputNumber("\nInput weight in stones: ");
             pound = InputNumber("Input weight in pounds: ");
             pound += stones * POUNDS_IN_STONES;
 
-            Console.WriteLine("Input your height (feet & inches) \n");
+            Console.WriteLine("\nInput your height (feet & inches) \n");
             double feet = InputNumber("Input height in feet: ");
             inch = (int)InputNumber("Input height in inches: ");
             inch += (int)feet * INCHES_IN_FEET;
@@ -120,32 +120,32 @@ namespace ConsoleAppProject.App02
         {
             if (indexBMI < UNDERWEIGHT)
             {
-                Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
+                Console.WriteLine($"\nBMI is {indexBMI:0.00}, therefore " +
                     $"you are classed as underweight.");
             }
             else if (indexBMI <= NORMAL)
             {
-                Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
+                Console.WriteLine($"\nBMI is {indexBMI:0.00}, therefore " +
                     $"you are classed as normal weight.");
             }
             else if (indexBMI <= OVERWEIGHT)
             {
-                Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
+                Console.WriteLine($"\nBMI is {indexBMI:0.00}, therefore " +
                     $"you are classed as overweight.");
             }
             else if (indexBMI <= OBESE_CLASS_I)
             {
-                Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
+                Console.WriteLine($"\nBMI is {indexBMI:0.00}, therefore " +
                     $"you are classed as Obese Class 1.");
             }
             else if (indexBMI <= OBESE_CLASS_II)
             {
-                Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
+                Console.WriteLine($"\nBMI is {indexBMI:0.00}, therefore " +
                     $"you are classed as Obese Class 2.");
             }
             else if (indexBMI <= OBESE_CLASS_III)
             {
-                Console.WriteLine($"BMI is {indexBMI:0.00}, therefore" +
+                Console.WriteLine($"\nBMI is {indexBMI:0.00}, therefore " +
                     $"you are classed as Obese Class 3.");
             }
         }
@@ -153,12 +153,12 @@ namespace ConsoleAppProject.App02
         ///Output BAME message for higher risk people.
         public void OutputBameMessage()
         {
-            Console.WriteLine("==================================================");
+            Console.WriteLine("\n==================================================");
             Console.WriteLine("There are higher risks for: ");
-            Console.WriteLine("Black, Asian or other minority people");
-            Console.WriteLine("==================================================");
+            Console.WriteLine("Black, Asian or other minority people.");
             Console.WriteLine("The risk of excess weight for some BAME groups");
-            Console.WriteLine("occur at a lower BMI than for the white population");
+            Console.WriteLine("occur at a lower BMI than for the white population.");
+            Console.WriteLine("==================================================");
         }
     }
 }
