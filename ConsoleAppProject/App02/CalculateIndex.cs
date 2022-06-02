@@ -8,7 +8,6 @@ namespace ConsoleAppProject.App02
     /// 
     ///
     /// 
-
     public class BMI
     {
     //Constant for pounds in a stone and inches in a foot
@@ -33,18 +32,6 @@ namespace ConsoleAppProject.App02
     //BMI index
     public double indexBMI;
 
-    private UnitSystems SelectUnits()
-    {
-        Console.WriteLine("1. Imperial")
-        Console.WriteLine("2. Metric")
-
-        Console.Write("\n Choose unit type: ");
-        string typeChoice = Console.ReadLine();
-
-        if (typeChoice == "1") return UnitSystems.Imperial;
-        else return UnitSystems.metric
-    }
-
     public void CalculateIndex()
     { 
         Console.WriteLine(" =================");
@@ -68,4 +55,14 @@ namespace ConsoleAppProject.App02
         OutputBameMessage();
     }
 
+    private UnitSystems SelectUnits()
+    {
+        Console.WriteLine("1. Imperial")
+        Console.WriteLine("2. Metric")
 
+        Console.Write("\n Choose unit type: ");
+        string typeChoice = Console.ReadLine();
+
+        if (typeChoice == "1") return UnitSystems.Imperial;
+        else return UnitSystems.metric
+    }
