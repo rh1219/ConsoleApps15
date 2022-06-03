@@ -7,10 +7,9 @@ using System;
 namespace ConsoleAppProject
 {
     /// <summary>
-    /// The main method in this class is called first
-    /// when the application is started.  It will be used
-    /// to start App01 to App05 for CO453 CW1
-    /// 
+    /// The main method in this class is called
+    /// when the application is started 
+    /// Used to start App01 to App05
     /// This Project has been modified by:
     /// Rahaat Hussain 
     /// </summary>
@@ -30,6 +29,8 @@ namespace ConsoleAppProject
             Console.WriteLine("========================");
             Console.WriteLine("\n 1. Distance Converter\n");
             Console.WriteLine("\n 2. BMI Calculator\n");
+            Console.WriteLine("\n 3. Student Grades\n");
+
 
             Console.WriteLine("Enter your choice: ");
             string option = Console.ReadLine();
@@ -41,6 +42,10 @@ namespace ConsoleAppProject
             else if (option == "2")
             {
                 calculator.CalculateIndex();
+            }
+            else if (option == "3")
+            {
+                
             }
         }
     }
