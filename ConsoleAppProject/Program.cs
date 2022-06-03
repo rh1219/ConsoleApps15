@@ -17,6 +17,7 @@ namespace ConsoleAppProject
     {
         private static DistanceConverter converter = new DistanceConverter();
         private static BMI calculator = new BMI();
+        private static StudentGrades marks = new StudentGrades();
 
         public static void Main(string[] args)
         {
@@ -45,7 +46,7 @@ namespace ConsoleAppProject
             }
             else if (option == "3")
             {
-                
+                marks.InputMarks();
             }
         }
     }
