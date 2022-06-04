@@ -185,5 +185,21 @@ namespace ConsoleAppProject.App03
             }
             Console.WriteLine();
         }
+
+        /// <summary>
+        /// Displays menu of options
+        /// </summary>
+        public void OutputMenu()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Output stats (mean, maximum and minimum)
+        /// </summary>
+        public void OutputStats()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
