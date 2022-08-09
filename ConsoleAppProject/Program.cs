@@ -1,53 +1,65 @@
-﻿using ConsoleAppProject.App01;
+﻿using System;
+using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
 using ConsoleAppProject.Helpers;
-using System;
 
 namespace ConsoleAppProject
 {
     /// <summary>
-    /// The main method in this class is called
-    /// when the application is started 
-    /// Used to start App01 to App05
+    /// The main method in this class is called first
+    /// when the application is started.  It will be used
+    /// to start Apps 01 to 05 for CO453 CW1
+    /// 
     /// This Project has been modified by:
-    /// Rahaat Hussain 
+    /// Derek Peacock 14/12/2020
+    /// Rahaat Hussain
     /// </summary>
     public static class Program
     {
-        private static DistanceConverter converter = new DistanceConverter();
-        private static BMI calculator = new BMI();
-        private static StudentGrades marks = new StudentGrades();
-
         public static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.White;
 
-            Console.WriteLine("    BNU CO453 Applications Programming 2021-2022! ");
+            Console.WriteLine("BNU CO453 Application Programming 2021-2022");
+            Console.WriteLine("By Rahaat Hussain");
             Console.WriteLine();
+            Menu();
+        }
 
-            Console.WriteLine("\n Options\n");
-            Console.WriteLine("========================");
-            Console.WriteLine("\n 1. Distance Converter\n");
-            Console.WriteLine("\n 2. BMI Calculator\n");
-            Console.WriteLine("\n 3. Student Grades\n");
+        public static void Menu()
+        {
+            Console.WriteLine("Select an app to run:"); 
+            Console.WriteLine();
+            Console.WriteLine("1. App01: Distance Converter");
+            Console.WriteLine("2. App02: BMI Calculator"); 
+            Console.WriteLine("3. App03: Student Marks"); 
+            Console.WriteLine();
+            Console.Write("Enter app number: ");
+            string SelectedApp = Console.ReadLine(); 
 
-
-            Console.WriteLine("Enter your choice: ");
-            string option = Console.ReadLine();
-
-            if (option == "1")
+            switch (SelectedApp) 
             {
-                converter.ConvertDistance();
-            }
-            else if (option == "2")
-            {
-                calculator.CalculateIndex();
-            }
-            else if (option == "3")
-            {
-                marks.InputMarks();
+                case "1": 
+                    Console.WriteLine("Distance Converter");
+                    DistanceConverter converter = new DistanceConverter();
+                    converter.ConvertDistance();
+                    break;
+                case "2": 
+                    Console.WriteLine("BMI Calculator");
+                    BMI calculator = new BMI();
+                    calculator.CalculateIndex();
+                    break;
+                case "3": 
+                    Console.WriteLine("Student Marks");
+                    StudentGrades grades = new StudentGrades();
+                    grades.Run();
+                    break;
+                default:
+                    Console.WriteLine("Invalid Input, try again.");
+                    break;
             }
         }
     }
 }
+
