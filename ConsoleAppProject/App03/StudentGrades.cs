@@ -118,31 +118,26 @@ namespace ConsoleAppProject.App03
         /// </summary>
         public static Grades ConvertToGrade(int mark)
         {
-            // Grade F
             if (mark >= LowestMark && mark < LowestGradeD)
             {
                 return Grades.F;
             }
 
-            // Grade D
             else if (mark >= LowestGradeD && mark < LowestGradeC)
             {
                 return Grades.D;
             }
 
-            // Grade C
             else if (mark >= LowestGradeC && mark < LowestGradeB)
             {
                 return Grades.C;
             }
 
-            // Grade B
             else if (mark >= LowestGradeB && mark < LowestGradeA)
             {
                 return Grades.B;
             }
 
-            // Grade A
             else if (mark >= LowestGradeA && mark <= HighestMark)
             {
                 return Grades.A;
@@ -172,10 +167,10 @@ namespace ConsoleAppProject.App03
         {
             CalculateStats();
             ConsoleHelper.OutputHeading("Student Grades");
-            Console.WriteLine("Mean Mark: " + Mean);
-            Console.WriteLine("Minimum Mark: " + Minimum);
-            Console.WriteLine("Maximum Mark: " + Maximum);
-            Run(); // Show Menu
+            Console.WriteLine("Mean : " + Mean);
+            Console.WriteLine("Minimum : " + Minimum);
+            Console.WriteLine("Maximum : " + Maximum);
+            Run();
         }
 
         /// <summary>
