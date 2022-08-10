@@ -5,7 +5,7 @@ using ConsoleAppProject.Helpers;
 namespace ConsoleAppProject.App03
 {
     /// <summary>
-    /// This program allows a user to perform tasks such as Inputting and Outputting Marks, creating Grade Profiles and Statistics.
+    /// This program allows a user to perform tasks such as Inputting and Outputting Marks and creating Grade Profiles and Statistics.
     /// </summary>
     /// <author>
     /// Rahaat Hussain Version 1.0
@@ -114,7 +114,7 @@ namespace ConsoleAppProject.App03
         }
 
         /// <summary>
-        /// This method performs the Mark to Grade conversion
+        /// Mark to Grade conversion
         /// </summary>
         public static Grades ConvertToGrade(int mark)
         {
@@ -166,7 +166,7 @@ namespace ConsoleAppProject.App03
         }
 
         /// <summary>
-        /// This method outputs the Mean, Minimum, and Maximum Mark calculated.
+        /// Outputs the Mean, Minimum, and Maximum Mark calculated
         /// </summary>
         public void OutputStats()
         {
@@ -179,7 +179,7 @@ namespace ConsoleAppProject.App03
         }
 
         /// <summary>
-        /// Calculates the overall Grade Profile of each Grade for students
+        /// Calculates the Grade Profile for students
         /// </summary>
         public void CalculateGradeProfile()
         {
@@ -195,7 +195,7 @@ namespace ConsoleAppProject.App03
         }
 
         /// <summary>
-        /// Outputs the overall Grade Profile
+        /// Outputs the Grade Profile
         /// </summary>
         public void OutputGradeProfile()
         {
@@ -210,7 +210,7 @@ namespace ConsoleAppProject.App03
                 Console.WriteLine($"Grade {grade} Profile\n Percentage: {percentage}% | Student Count: {count}");
                 grade++;
             }
-            Run(); // Show Menu
+            Run();
         }
     }
 }
